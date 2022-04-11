@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block container %}
+
+<div class="container">
+
+    <div class="crud-title text-center">
+        <h4>Python Flask CRUD Web Application Development</h4>
+    </div>
+
+    {% include "/crud/table.html" %}
+
+    {% include "/crud/modal-add.html" %}
+
+    {% include "/crud/modal-edit.html" %}
+
+    <div class="crud-footer">
+        <h5>Python / Flask / MySQL
+            <span class="right">Version 1.0</span>
+        </h5>
+    </div>
+
+
+</div>
+
+{% endblock %}

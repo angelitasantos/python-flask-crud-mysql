@@ -1,0 +1,228 @@
+@import url(./root.css);
+
+
+/* ########################################################### */
+
+header {
+    z-index: 999;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 200px;
+    transition: 0.5s ease;
+}
+
+header .brand {
+    color: var(--light);
+    font-size: 1.5em;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+header .navigation {
+    position: relative;
+}
+
+header .navigation .navigation-items a {
+    position: relative;
+    margin-left: 30px;
+    color: var(--light);
+    font-size: 1em;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+header .navigation .navigation-items a:before {
+    content: '';
+    position: absolute;
+    background: var(--light);
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s ease;
+}
+
+header .navigation .navigation-items a:hover:before {
+    width: 100%;
+}
+
+
+/* ########################################################### */
+
+footer {
+    width: 100%;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3% 4%;
+    text-align: center;
+    background: linear-gradient(to top, #0c7c57, #086747);
+}
+
+.redes-socials-icons a {
+    font-size: 1.5em;
+    color: rgba(255, 255, 255, 0.7);
+    padding-right: 10px;
+    margin-bottom: 10px;
+}
+
+.redes-socials-icons a:hover {
+    color: var(--light);
+}
+
+#copyright {
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 2%;
+}
+
+
+/* ########################################################### */
+
+.home {
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-top: 15px;
+}
+
+.home img {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.home.center {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2%;
+}
+
+section.banner-container {
+    margin: 0;
+    margin-top: 70px;
+    width: 0 auto;
+    height: 500px;
+    position: relative;
+}
+
+.banner-single {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-size: cover;
+    background-position: center;
+}
+
+.overlay {
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+section.banner-container div h5 {
+    z-index: 2;
+    width: 93%;
+    max-width: 400px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+section.banner-container div h5 {
+    color: var(--header);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.slide1 {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8) 100%), url(/static/img/slide1.webp);
+}
+
+.slide2 {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8) 100%), url(/static/img/slide2.webp);
+}
+
+.slide3 {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8) 100%), url(/static/img/slide3.webp);
+}
+
+
+/* ########################################################### */
+
+.about {
+    margin-top: 40px;
+    padding: 30px;
+}
+
+section h6.txtAbout {
+    padding-top: 10px;
+}
+
+section article {
+    text-align: center;
+}
+
+section article img {
+    width: 140px;
+    height: 140px;
+}
+
+section article div div h6 {
+    padding-top: 25px;
+}
+
+.txtAbout,
+.txtPhoto1,
+.txtPhoto2 {
+    line-height: 30px;
+    text-align: center;
+    padding: 30px 0;
+    color: var(--bg-gray);
+}
+
+
+/* ########################################################### */
+
+.contact {
+    margin: 70px 0;
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+}
+
+.contact div h2 {
+    margin-top: 70px;
+    padding-bottom: 40px;
+}
+
+.contact div p {
+    padding-bottom: 15px;
+}
+
+
+/* ########################################################### */
+
+.crud-title {
+    margin-top: 90px;
+    margin-bottom: 20px;
+    padding: 15px 0;
+    background-color: var(--secondary);
+    color: var(--light);
+}
+
+.crud-footer {
+    margin: 20px 0;
+    padding: 15px 10px;
+    background-color: var(--secondary);
+    color: var(--light);
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/static/img/logo.png" type="image/x-icon">
+    <title>{{ title }}</title>
+
+    <meta name="description" content="description">
+    <meta name="keywords" content="keywords">
+    <meta name="author" content="author">
+    <meta name="classification" content="classification">
+
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="/static/css/responsive.css">
+    <script src="https://kit.fontawesome.com/bfe7a3e22e.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" charset="utf-8"></script>
+</head>
+
+<body>
+
+    <header class="header">
+        <a href="{{url_for('home')}}" class="company brand"></a>
+        <div class="menu-btn"></div>
+        <nav class="navigation">
+            <div class="navigation-items">
+                <a href="{{url_for('home')}}" id="nav-section1"></a>
+                <a href="{{url_for('about')}}" id="nav-section2"></a>
+                <a href="{{url_for('contact')}}" id="nav-section3"></a>
+                <a href="{{url_for('crud')}}" id="nav-section4"></a>
+            </div>
+        </nav>
+    </header>
