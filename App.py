@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, redirect, url_for
 from database import *
 
 
@@ -7,7 +7,7 @@ app = Flask(__name__)
 app.secret_key = 'flash message'
 
 self = 'self'
-conexao = MySQL.conexao(self)
+conexao = ConexaoMySQL.conexao(self)
 
 @app.errorhandler(404)
 def not_found(e):
@@ -33,13 +33,25 @@ def contact():
 def crud():
     title = 'CRUD'
     self = 'self'
-    data = MySQL.read(self)
+    data = ConexaoMySQL.read(self)
     return render_template('crud.html', title=title, students = data)
 
 @app.route('/create', methods = ['POST'])
 def create():
     self = 'self'
-    MySQL.create(self)
+    ConexaoMySQL.create(self)
+    return redirect(url_for('crud'))
+
+@app.route('/update', methods = ['POST', 'GET'])
+def update():
+    self = 'self'
+    ConexaoMySQL.update(self)
+    return redirect(url_for('crud'))
+
+@app.route('/delete/<string:id_data>', methods = ['POST', 'GET'])
+def delete(id_data):
+    self = 'self'
+    ConexaoMySQL.delete(self, id_data)
     return redirect(url_for('crud'))
 
 if __name__ == '__main__':
